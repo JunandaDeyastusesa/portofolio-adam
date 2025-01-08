@@ -1,108 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Portfolio Website Design | Codehal</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio Website Design | Codehal</title>
+        <!-- swiper css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <!-- swiper css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <!-- box icons -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <body>
+        <!-- header design -->
 
-<body>
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
 
-    <!-- header design -->
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portofolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portofolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <div class="bx bx-moon" id="darkMode-icon"></div>
+        </header>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
-    </header>
+        <!-- home section design -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, I am</h3>
+                <h1>Ricky Adam.S</h1>
+                <p>praesentium illo quod exercitationem inventore nisi odio ea, illum doloribus. Officia quo velit harum exercitationem. At, blanditiis ad.</p>
 
-    <!-- home section design -->
-     <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1>Ricky Adam.S</h1>
-            <p>praesentium illo quod exercitationem inventore nisi odio ea, illum doloribus. Officia quo velit harum exercitationem. At, blanditiis ad.</p>
+                <div class="social-media">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                </div>
 
-            <div class="social-media">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-twitter"></i></a>
-                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
+                <a href="#" class="btn">Download CV</a>
             </div>
 
-            <a href="#" class="btn">Download CV</a>
-        </div>
+            <div class="profession-container">
+                <div class="profession-box">
+                    <div class="profession" style="--i: 0">
+                        <i class="bx bx-code-alt"></i>
+                        <h3>Web Developer</h3>
+                    </div>
+                    <div class="profession" style="--i: 1">
+                        <i class="bx bx-camera"></i>
+                        <h3>Security Analys</h3>
+                    </div>
+                    <div class="profession" style="--i: 2">
+                        <i class="bx bx-code-alt"></i>
+                        <h3>Backend Enginner</h3>
+                    </div>
+                    <div class="profession" style="--i: 3">
+                        <i class="bx bx-camera"></i>
+                        <h3>Scrum Master</h3>
+                    </div>
 
-        <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession" style="--i:0;">
-                    <i class="bx bx-code-alt"></i>
-                    <h3>Web Developer</h3>
-                </div>
-                <div class="profession" style="--i:1;">
-                    <i class="bx bx-camera"></i>
-                    <h3>Security Analys</h3>
-                </div>
-                <div class="profession" style="--i:2;">
-                    <i class="bx bx-code-alt"></i>
-                    <h3>Backend Enginner</h3>
-                </div>
-                <div class="profession" style="--i:3;">
-                    <i class="bx bx-camera"></i>
-                    <h3>Scrum Master</h3>
+                    <div class="circle"></div>
                 </div>
 
-                <div class="circle"></div>
+                <div class="overlay"></div>
+
+                <div class="home-img">
+                    <img src="images/profile.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <!-- about section design -->
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="images/about.png" alt="" />
             </div>
 
-            <div class="overlay"></div>
-        </div>
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Hi, I'm Here To Help You Next Project!</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex eum tenetur dolorem esse ab ipsam, labore sint ea excepturi, sit maxime architecto reiciendis veniam quisquam atque cum eaque cumque temporibus!</p>
+            </div>
+        </section>
 
-        <div class="home-img">
-            <img src="images/home.png" alt="">
-        </div>
-     </section>
+        <!-- services section design -->
+        <section class="services" id="services">
+            <h2 class="heading">My <span>Services</span></h2>
 
-    <!-- about section design -->
+            <div class="services-container">
+                <div class="services-container">
+                    <div class="services-box">
+                        <i class="bx bx-code-alt"></i>
+                        <h3>Web Development</h3>
+                        <p>Membangun website modern dan responsif menggunakan framework Laravel. Fokus pada performa, keamanan, dan user experience yang optimal.</p>
+                    </div>
 
-    <!-- services section design -->
+                    <div class="services-box">
+                        <i class="bx bx-shield-quarter"></i>
+                        <h3>Security Analysis</h3>
+                        <p>
+                            Melakukan pengujian penetrasi (pentesting) untuk mengidentifikasi kerentanan sistem. Menggunakan berbagai tools seperti Zenmap, Nessus, Nikto, SQLMap, Metasploit, dan Burp Suite untuk memastikan keamanan aplikasi
+                            Anda.
+                        </p>
+                    </div>
 
-    <!-- portfolio section design -->
+                    <div class="services-box">
+                        <i class="bx bx-server"></i>
+                        <h3>Backend Engineering</h3>
+                        <p>Membangun API yang andal menggunakan Java dan Spring Boot. Berpengalaman dengan teknologi seperti Apache Tomcat, Spring MVC, Spring Data JPA, dan RESTful API untuk mendukung skalabilitas aplikasi Anda.</p>
+                    </div>
 
-    <!-- testimonial design -->
+                    <div class="services-box">
+                        <i class="bx bx-group"></i>
+                        <h3>Scrum Master</h3>
+                        <p>Mengelola proyek secara efisien menggunakan metode Agile. Meningkatkan kolaborasi tim dan memastikan pengembangan aplikasi berjalan fleksibel dan sesuai target.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- contact section design -->
+        <!-- portfolio section design -->
+        <section class="portofolio" id="portfolio">
+            <h2 class="heading">My <span>Portofolio</span></h2>
 
-    <!-- footer design -->
+            <div class="portofolio-container">
+                <div class="portofolio-box">
+                    <img src="images/portfolio1.jpg" alt="" />
 
+                    <div class="portofolio-layer">
+                        <h4>Web Design</h4>
+                    </div>
+                </div>
 
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+                <div class="portofolio-box">
+                    <img src="images/portfolio2.jpg" alt="" />
 
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                    <div class="portofolio-layer">
+                        <h4>Web Design</h4>
+                    </div>
+                </div>
 
-    <!-- custom js -->
-    <script src="js/script.js"></script>
-</body>
+                <div class="portofolio-box">
+                    <img src="images/portfolio3.jpg" alt="" />
 
+                    <div class="portofolio-layer">
+                        <h4>Web Design</h4>
+                    </div>
+                </div>
+
+                <div class="portofolio-box">
+                    <img src="images/portfolio4.jpg" alt="" />
+
+                    <div class="portofolio-layer">
+                        <h4>Web Design</h4>
+                    </div>
+                </div>
+
+                <div class="portofolio-box">
+                    <img src="images/portfolio5.jpg" alt="" />
+
+                    <div class="portofolio-layer">
+                        <h4>Web Design</h4>
+                    </div>
+                </div>
+
+                <div class="portofolio-box">
+                    <img src="images/portfolio6.jpg" alt="" />
+
+                    <div class="portofolio-layer">
+                        <h4>Web Design</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- swiper js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- custom js -->
+        <script src="js/script.js"></script>
+    </body>
 </html>
