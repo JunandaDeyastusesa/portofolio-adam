@@ -19,7 +19,7 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
     --size-100-profession: 100vh;
     --size-50-profession: 50vh;
-    --size-circle: 70vh;
+    --size-circle: 60vh;
 }
 
 html {
@@ -423,9 +423,9 @@ span {
 }
 
 /* Contact */
-.contact h2 {
+/* .contact h2 {
     margin-bottom: 3rem;
-}
+} */
 
 .contact form {
     max-width: 70rem;
