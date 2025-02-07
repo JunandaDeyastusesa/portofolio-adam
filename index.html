@@ -1,231 +1,546 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Responsive Portfolio Website Design | Codehal</title>
+<html>
 
-        <!-- swiper css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style2.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
 
-        <!-- box icons -->
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-traparent fixed-top">
+        <div class="container py-2">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my-service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my-portofolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-me">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <span class="bx bx-moon" id="darkMode-icon"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <!-- custom css -->
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
+    <section class="hero d-flex align-items-center justify-content-center" id="hero">
+        <div class="container hero-sec">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div>
+                    <h3 class="mb-0 sub-title"></h3>
+                    <h1 class="mb-2 typed-text"></h1>
+                    <p class="mb-4 desc"></p>
 
-    <body>
-        <!-- header design -->
-        <header class="header">
-            <a href="https://magenta.bumn.go.id/u/rickyadamsaputra" class="logo">Portfolio</a>
-
-            <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-            <div class="bx bx-moon" id="darkMode-icon"></div>
-
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </header>
-
-        <!-- home section design -->
-        <section class="home" id="home">
-            <div class="home-content">
-                <h3>Hello, I am</h3>
-                <h1>Ricky Adam.S</h1>
-                <p>Specializing in backend development, I design and implement robust RESTful API and scalable systems to support good and secure digital experiences.</p>
-
-                <div class="social-media">
-                    <a href="https://youtube.com/@koadamcode?si=_yfwluU2_mk21-SS" target="_blank"><i class="bx bxl-youtube"></i></a>
-                    <a href="https://x.com/KoKo_Wizzi?t=gWuQgHYLDtg52L3lBj01sA&s=09" target="_blank"><i class="bx bxl-twitter"></i></a>
-                    <a href="https://www.instagram.com/rickyadam.s/profilecard/?igsh=MWplb24xaXl6aDRyNQ==" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
-                    <a href="https://www.linkedin.com/in/ricky-adam-saputra-8483a0307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                    <ul class="social-media d-flex list-unstyled gap-4" data-aos="fade-up" data-aos-offset="100"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <li class="d-flex align-items-center justify-content-center">
+                            <a class="d-flex align-items-center justify-content-center border custom-border border-2 rounded-circle p-2"
+                                href="https://youtube.com/@koadamcode?si=_yfwluU2_mk21-SS" target="_blank">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-center">
+                            <a class="d-flex align-items-center justify-content-center border custom-border border-2 rounded-circle p-2"
+                                href="https://x.com/KoKo_Wizzi?t=gWuQgHYLDtg52L3lBj01sA&s=09" target="_blank">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-center">
+                            <a class="d-flex align-items-center justify-content-center border custom-border border-2 rounded-circle p-2"
+                                href="https://www.instagram.com/rickyadam.s/profilecard/?igsh=MWplb24xaXl6aDRyNQ=="
+                                target="_blank">
+                                <i class="bx bxl-instagram-alt"></i>
+                            </a>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-center">
+                            <a class="d-flex align-items-center justify-content-center border custom-border border-2 rounded-circle p-2"
+                                href="https://www.linkedin.com/in/ricky-adam-saputra-8483a0307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary border-2 px-4 py-2 mt-3" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="900">Download CV</button>
                 </div>
-
-                <a href="#" class="btn">Download CV</a>
-            </div>
-
-            <div class="profession-container">
-                <div class="profession-box">
-                    <div class="profession" style="--i: 0">
-                        <i class="bx bx-code-alt"></i>
-                        <h3>Backend Enginner</h3>
-                    </div>
-                    <div class="profession" style="--i: 1">
-                        <i class="bx bx-camera"></i>
-                        <h3>Security Analysis</h3>
-                    </div>
-                    <div class="profession" style="--i: 2">
-                        <i class="bx bx-code-alt"></i>
-                        <h3>Web Developer</h3>
-                    </div>
-                    <div class="profession" style="--i: 3">
-                        <i class="bx bx-camera"></i>
-                        <h3>Scrum Master</h3>
-                    </div>
-
-                    <div class="circle"></div>
-                </div>
-
-                <div class="overlay"></div>
-            </div>
-
-            <div class="home-img">
-                <img src="images/profile.png" alt="" />
-            </div>
-        </section>
-
-        <!-- about section design -->
-        <section class="about" id="about">
-            <div class="about-img">
-                <img src="images/about.png" alt="" />
-            </div>
-
-            <div class="about-content">
-                <h2 class="heading">About <span>Me</span></h2>
-                <h3>Hi, I'm Here To Help You</h3>
-                <p>
-                    I am a Backend Engineer with expertise in building robust APIs and scalable systems. With a strong background in web development, application security, and project management, I am committed to delivering reliable and
-                    secure digital solutions. My mission is to empower businesses by creating efficient and secure systems to use.
-                </p>
-            </div>
-        </section>
-
-        <!-- services section design -->
-        <section class="services" id="services">
-            <h2 class="heading">My <span>Services</span></h2>
-
-            <div class="services-container">
-                <div class="services-container">
-                    <div class="services-box">
-                        <i class="bx bx-server"></i>
-                        <h3>Backend Engineer</h3>
-                        <p>Building reliable APIs using Java and Spring Boot. Experienced in technologies such as Apache Tomcat, Spring MVC, Spring Data JPA, and RESTful API to support your application's scalability.</p>
-                    </div>
-
-                    <div class="services-box">
-                        <i class="bx bx-shield-quarter"></i>
-                        <h3>Security Analysis</h3>
-                        <p>Conducting penetration testing (pentesting) to identify system vulnerabilities. Utilizing tools like Zenmap, Nessus, Nikto, SQLMap, Metasploit, and Burp Suite to ensure your application's security.</p>
-                    </div>
-
-                    <div class="services-box">
-                        <i class="bx bx-code-alt"></i>
-                        <h3>Web Development</h3>
-                        <p>Creating modern and responsive websites using the Laravel framework. Focused on performance, security, and an optimal user experience.</p>
-                    </div>
-
-                    <div class="services-box">
-                        <i class="bx bx-group"></i>
-                        <h3>Scrum Master</h3>
-                        <p>Efficiently managing projects using Agile methodology. Enhancing team collaboration and ensuring application development remains flexible and on target.</p>
-                    </div>
+                <div class="right">
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="hero-right d-none d-md-block" data-aos="fade-left" data-aos-easing="ease-in-sine"
+            data-aos-duration="1200">
+            <img class="ms-auto" src="images/hero-right.png" alt="">
+        </div>
+    </section>
 
-        <!-- portfolio section design -->
-        <section class="portofolio" id="portfolio">
-            <h2 class="heading">My <span>Portofolio</span></h2>
+    <section class="about-me d-md-flex align-items-md-center" id="about-me">
+        <div class="container about-me-sec">
+            <div class="row g-4 d-flex">
+                <div class="col-md-5" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                    data-aos-duration="1000">
+                    <img class="w-100" src="images/about.png" alt="">
+                </div>
+                <div class="right col-md-7 d-flex flex-column justify-content-center ps-md-5" data-aos="fade-left"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                    <h2 class="mb-0">About <span>Me</span></h2>
+                    <h3 class="mb-4">Hi, I'm Here To Help You</h3>
+                    <p> I am a Backend Engineer with expertise in building robust APIs and scalable systems. With a
+                        strong background in web development, application security, and project management, I am
+                        committed to
+                        delivering reliable and secure digital solutions. My mission is to empower businesses by
+                        creating efficient and secure
+                        systems to use.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="portofolio-container">
-                <div class="portofolio-box">
-                    <img src="images/portfolio1.png" alt="Portfolio Cloud Computing" />
-
-                    <div class="portofolio-layer">
-                        <h4>Cloud Computing</h4>
-                        <p>Developed a PHP Native application and deployed it using Docker. Integrated the project with Jenkins, GitHub Webhooks, and Docker for seamless CI/CD automation.</p>
+    <section class="my-service d-md-flex align-items-md-center" id="my-service">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                data-aos-duration="800">My
+                <span>Services</span>
+            </h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <div class="card h-100 border-0 pt-4 pb-3">
+                        <i class="card-img-top bx bx-server text-center text-md-start ms-md-3"></i>
+                        <div class="card-body ps-3">
+                            <h4 class="card-title mb-2 text-center text-md-start">Backend Engineer</h4>
+                            <p class="card-text text-center text-md-start">Building reliable APIs using Java and Spring Boot. Experienced in
+                                technologies such as Apache
+                                Tomcat, Spring MVC, Spring Data JPA, and RESTful API to support your application's
+                                scalability.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="portofolio-box">
-                    <img src="images/portfolio2.png" alt="Portfolio Scrum Master" />
-
-                    <div class="portofolio-layer">
-                        <h4>Scrum Master</h4>
-                        <p>Managed a app project using Trello and Agile methodology to ensure efficient collaboration and timely delivery.</p>
+                <div class="col" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <div class="card h-100 border-0 pt-4 pb-3">
+                        <i class="card-img-top bx bx-shield-quarter text-center text-md-start ms-md-3"></i>
+                        <div class="card-body ps-3 text-center text-md-start">
+                            <h4 class="card-title text-center text-md-start mb-2">Security Analysis</h4>
+                            <p class="card-text">Conducting penetration testing (pentesting) to identify system
+                                vulnerabilities. Utilizing tools
+                                like Zenmap, Nessus, Nikto, SQLMap, Metasploit, and Burp Suite to ensure your
+                                application's
+                                security.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="portofolio-box">
-                    <img src="images/port" alt="Portfolio Security Analysis" />
-
-                    <div class="portofolio-layer">
-                        <h4>Security Analysis</h4>
+                <div class="col" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <div class="card h-100 border-0 pt-4 pb-3">
+                        <i class="card-img-top bx bx-code-alt text-center text-md-start ms-md-3"></i>
+                        <div class="card-body ps-3 text-center text-md-start">
+                            <h4 class="card-title text-center text-md-start mb-2">Web Development</h4>
+                            <p class="card-text">Creating modern and responsive websites using the Laravel framework.
+                                Focused on performance,
+                                security, and an optimal user experience.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="portofolio-box">
-                    <img src="images/portfolio4.png" alt="" />
-
-                    <div class="portofolio-layer">
-                        <h4>Web Developer</h4>
-                        <p>Developed a comprehensive school management system utilizing Laravel framework, implemented with Agile methodology to ensure efficient project delivery and adaptability.</p>
-                    </div>
-                </div>
-
-                <div class="portofolio-box">
-                    <img src="images/portfolio5.png" alt="Portfolio Backend Spring Boot" />
-
-                    <div class="portofolio-layer">
-                        <h4>Spring Boot</h4>
-                        <p>
-                            Developed robust RESTful APIs using Spring Boot. Implemented security features like JWT, BCrypt, and input validation. Integrated MongoDB for efficient data management.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="portofolio-box">
-                    <img src="images/portfolio3.jpg" alt="Portfolio Dekstop" />
-
-                    <div class="portofolio-layer">
-                        <h4>Comming Soon GraphQl</h4>
+                <div class="col" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <div class="card h-100 border-0 pt-4 pb-3">
+                        <i class="card-img-top bx bx-group text-center text-md-start ms-md-3"></i>
+                        <div class="card-body ps-3 text-center text-md-start">
+                            <h4 class="card-title text-center text-md-start mb-2">Scrum Master</h4>
+                            <p class="card-text">Efficiently managing projects using Agile methodology. Enhancing team
+                                collaboration and ensuring
+                                application development remains flexible and on target.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- contact section -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Contact <span>Me!</span></h2>
-
-            <form action="#">
-                <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
+    <section class="my-portofolio" id="my-portofolio">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom">My
+                <span>Portofolio</span>
+            </h2>
+            <div class="button-option row row-cols-3 border border-2 py-3 px-md-3 g-2 rounded-3" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom" data-aos-duration="900">
+                <div class="col text-center">
+                    <button class="btn btn-primary w-100 py-3" onclick="showContent('projects')">Projects</button>
                 </div>
-                <div class="input-box">
-                    <input type="number" placeholder="Mobile Number">
-                    <input type="text" placeholder="Email Subject">
+                <div class="col text-center">
+                    <button class="btn btn-outline w-100 py-3"
+                        onclick="showContent('certificates')">Certificates</button>
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </form>
-        </section>
-
-        <!-- Footer Design -->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>Copyright &copy; 2025 by Ko Adam | Al Rights Reserved</p>
+                <div class="col text-center">
+                    <button class="btn btn-outline w-100 py-3" onclick="showContent('tech-stack')">Tech Stack</button>
+                </div>
             </div>
-            <div class="footer-iconTop">
-                <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+
+            <div class="galery">
+                <div class="projects" id="projects">
+                    <div class="row row-cols-1 row-cols-md-3 g-3 mt-2" data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom" data-aos-duration="1300">
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio1.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-3">Cloud Computing</h5>
+                                    <p class="card-text">Developed a PHP Native application and deployed it using
+                                        Docker.
+                                        Integrated the project with Jenkins, GitHub Webhooks, and Docker for seamless
+                                        CI/CD
+                                        automation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio2.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-3">Scrum Master</h5>
+                                    <p class="card-text">Managed a app project using Trello and Agile methodology to
+                                        ensure
+                                        efficient collaboration and timely delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio3.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-3">Security Analysis</h5>
+                                    <p class="card-text">Conducting penetration testing (pentesting) to identify system
+                                        vulnerabilities. Utilizing tools
+                                        like Zenmap, Nessus, Nikto, SQLMap, Metasploit, and Burp Suite to ensure your
+                                        application's
+                                        security.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio4.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-3">Web Developer</h5>
+                                    <p class="card-text">Developed a comprehensive school management system utilizing
+                                        Laravel framework, implemented with Agile methodology to ensure efficient
+                                        project
+                                        delivery and adaptability.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio5.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-3">Spring Boot</h5>
+                                    <p class="card-text">Developed robust RESTful APIs using Spring Boot. Implemented
+                                        security features like JWT, BCrypt, and input validation. Integrated MongoDB for
+                                        efficient data management.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificates d-none" id="certificates">
+                    <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio1.png" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio1.png" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <img src="images/portfolio1.png" class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tech-stack d-none" id="tech-stack">
+                    <div class="row row-cols-2 row-cols-md-6 g-3 mt-2">
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <i class='bx bxl-html5 card-img-top text-center'></i>
+                                </div>
+                                <h5 class="card-title text-center fs-5 fw-semibold">HTML</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <i class='bx bxl-css3 card-img-top text-center'></i>
+                                </div>
+                                <h5 class="card-title text-center fs-5 fw-semibold">CSS</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <i class='bx bxl-javascript card-img-top text-center'></i>
+                                </div>
+                                <h5 class="card-title text-center fs-5 fw-semibold">JS</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <i class='bx bxl-java card-img-top text-center'></i>
+                                </div>
+                                <h5 class="card-title text-center fs-5 fw-semibold">JAVA</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <i class='bx bxl-php card-img-top text-center'></i>
+                                </div>
+                                <h5 class="card-title text-center fs-5 fw-semibold">PHP</h5>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 border-0 p-3">
+                                <div class="d-image">
+                                    <i class='bx bxl-spring-boot card-img-top text-center'></i>
+                                </div>
+                                <h5 class="card-title text-center fs-5 fw-semibold">SPRING</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <!-- scroll reveal -->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <section class="contact-me" id="contact-me">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                data-aos-duration="800">Contact
+                <span>Me!</span>
+            </h2>
+            <div class="form-contact w-75 mx-auto">
+                <div class="row g-2">
+                    <div class="col-md" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                        data-aos-duration="900">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="full-name" placeholder="Jhon Doe">
+                            <label for="full-name">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                        data-aos-duration="900">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                            <label for="email">Email address</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-md" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                        data-aos-duration="900">
+                        <div class="form-floating mb-3">
+                            <input type="number" min="0" class="form-control" id="phone-number"
+                                placeholder="+62 812 2131 3353 2">
+                            <label for="phone-number">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="col-md" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                        data-aos-duration="900">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="email-subject" placeholder="Urgent">
+                            <label for="email-subject">Email Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-md" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine"
+                        data-aos-duration="900">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                style="height: 80px"></textarea>
+                            <label for="floatingTextarea2">Your Message</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2 mt-4" data-aos="fade-up" data-aos-duration="1200">
+                    <button type="button" class="btn btn-primary py-3 col-md-4 mx-auto">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- swiper js -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <footer>
+        <div class="container text-center">
+            Copyright © 2025 by Ko Adam | Al Rights Reserved
+        </div>
+    </footer>
 
-        <!-- custom js -->
-        <script src="js/script.js"></script>
-    </body>
+
+
+    <!-- ==================== JS ====================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector(".navbar");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add("navbar-scrolled");
+                } else {
+                    navbar.classList.remove("navbar-scrolled");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Get all nav links
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Function to remove the 'active' class from all links
+        function removeActiveClass() {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        // Function to add the 'active' class to the current link
+        function setActiveClass(sectionId) {
+            const currentLink = document.querySelector(`a[href="#${sectionId}"]`);
+            if (currentLink) {
+                currentLink.classList.add('active');
+            }
+        }
+
+        // Listen to the scroll event
+        window.addEventListener('scroll', () => {
+            // Get the position of each section
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 50; // Offset for the fixed navbar
+                const sectionBottom = sectionTop + section.offsetHeight;
+                const scrollPosition = window.scrollY;
+
+                // Check if the section is currently in view
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    removeActiveClass();
+                    setActiveClass(section.id);
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function showContent(id) {
+            const sections = document.querySelectorAll('.galery > div');
+            sections.forEach(section => {
+                section.classList.add('d-none');
+            });
+
+            const activeSection = document.getElementById(id);
+            if (activeSection) {
+                activeSection.classList.remove('d-none');
+            }
+
+            const buttons = document.querySelectorAll('.button-option button');
+            buttons.forEach(button => {
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-outline');
+            });
+            const activeButton = document.querySelector(`button[onclick="showContent('${id}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('btn-primary');
+                activeButton.classList.remove('btn-outline');
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('.typed-text', {
+            strings: ["Ricky Adam.S", "Backend Enginner"],
+            typeSpeed: 150,
+            backSpeed: 80,
+            backDelay: 1000,
+            loop: true,
+            showCursor: false
+        });
+
+        var typed = new Typed('.sub-title', {
+            strings: ["Hello, I am"],
+            typeSpeed: 60,
+            showCursor: false
+        });
+
+        var typed = new Typed('.desc', {
+            strings: ["Specializing in backend development, I design and implement robust RESTful API and scalable systems to support good and secure digital experiences."],
+            typeSpeed: 10,
+            showCursor: false
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
 </html>

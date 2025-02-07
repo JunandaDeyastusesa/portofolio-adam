@@ -14,7 +14,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -30,6 +30,31 @@ window.onscroll = () => {
     /*========== remove menu icon navbar when click navbar link (scroll) ==========*/
 
 };
+
+
+/*=================== GALERY =================*/
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".button-option button");
+    const sections = document.querySelectorAll(".galery > div");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            buttons.forEach((btn) => btn.classList.remove("btn-primary"));
+            buttons.forEach((btn) => btn.classList.add("btn-outline"));
+
+            // Hide all sections
+            sections.forEach((section) => (section.style.display = "none"));
+
+            // Show target section and activate button
+            const target = this.getAttribute("data-target");
+            document.getElementById(target).style.display = "block";
+            this.classList.remove("btn-outline");
+            this.classList.add("btn-primary");
+        });
+    });
+});
+
 
 
 /*========== swiper ==========*/

@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+    --bg-color: #fdfdfd;
+    --bs-primary: #754ef9;
+    --border-primary: #754ef9;
+    --text-color: #333;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.custom-border {
+    border-color: var(--border-primary) !important;
+}
+
+.btn-primary {
+    background-color: #754ef9;
+    transition: 0.5s ease;
+    border: #754ef9;
+}
+
+.btn-primary:hover {
+    background-color: #623be6;
+    border: #673df0;
+}
+
+.btn-outline-primary {
+    border-color: #754ef9;
+    color: #754ef9;
+    transition: 0.5s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #673df0;
+    border-color: #673df0;
+    color: #fff;
+}
+
+.btn-outline {
+    transition: 0.5s ease;
+}
+
+.btn-outline:hover {
+    background-color: #673df0;
+    border-color: #673df0;
+    color: #fff;
+}
+
+.navbar-scrolled {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar .navbar-brand{
+    font-size: 24;
+    color: var(--bs-primary);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar .nav-link {
+    position: relative;
+    color: white !important;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    /* Jarak garis dari teks */
+    width: 0%;
+    height: 2px;
+    background-color: var(--bg-color);
+    /* Warna garis bawah */
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link:hover::after {
+    width: 100%;
+    /* Garis penuh saat aktif atau hover */
+}
+
+/* Saat navbar discroll, ubah warna teks dan garis bawah */
+.navbar-scrolled .nav-link {
+    color: black !important;
+}
+
+.navbar-scrolled .nav-link::after {
+    background-color: var(--bs-primary);
+    /* Warna garis saat discroll */
+}
+
+.navbar .bx-moon {
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.navbar-scrolled a {
+    color: #000;
+}
+
+.navbar-scrolled .bx-moon {
+    color: #000;
+}
+
+
+.hero {
+    height: 100vh;
+
+    .hero-sec {
+        h3 {
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .social-media li a {
+            /* border-color: #3498db; Warna biru */
+            border: 0.2rem solid var(--bs-primary);
+            text-decoration: none;
+            font-size: 24px;
+            color: var(--bs-primary);
+            transition: 0.5s ease;
+        }
+
+        .social-media a:hover {
+            background-color: var(--bs-primary);
+            color: var(--white-color);
+        }
+    }
+
+    .hero-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+
+        img {
+            height: 100vh;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.about-me {
+    height: 100vh;
+    padding-top: 50px;
+
+    .about-me-sec {
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+
+            span {
+                color: var(--bs-primary);
+            }
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.my-service {
+    padding: 120px 0px 80px 0px;
+    /* padding-top: 100px; */
+
+    .container {
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+
+            span {
+                color: var(--bs-primary);
+            }
+        }
+
+        i {
+            font-size: 4.5rem;
+            color: var(--bs-primary);
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #616161;
+        }
+
+        .card {
+            background-color: #f1f1f1;
+            border-radius: 20px;
+        }
+    }
+}
+
+.my-portofolio {
+    /* height: 100vh; */
+    padding-top: 100px;
+
+    .container {
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+
+            span {
+                color: var(--bs-primary);
+            }
+        }
+
+        .galery {
+            .card {
+                background-color: #f4f1fd;
+                cursor: pointer;
+
+                .d-image {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                }
+
+                img {
+                    transition: all 1.3s;
+                }
+
+                .card-title {
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                    color: #673df0;
+                }
+
+                .card-text {
+                    font-size: 0.85rem;
+                    color: #636363;
+                }
+            }
+
+            .card:hover {
+                background-color: #e7e1fa;
+            }
+
+            .card:hover img {
+                transform: scale(1.08);
+            }
+
+            .tech-stack {
+                .card-img-top {
+                    font-size: 7rem;
+                }
+
+                .d-image {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                }
+
+                i {
+                    transition: all 1.3s;
+                    cursor: pointer;
+                }
+
+                .card:hover i {
+                    transform: scale(1.08);
+                }
+            }
+        }
+    }
+}
+
+.contact-me {
+    /* height: 100vh; */
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    .container {
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+
+            span {
+                color: var(--bs-primary);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: var(--bs-primary);
+    color: #fff;
+
+    .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .nav-link {
+        position: relative;
+        color: #000 !important;
+    }
+
+    /* Saat navbar discroll, ubah warna teks dan garis bawah */
+    .navbar .nav-link {
+        color: black !important;
+    }
+
+    .navbar .nav-link::after {
+        background-color: var(--bs-primary);
+        /* Warna garis saat discroll */
+    }
+
+    .navbar .bx-moon {
+        color: #fff;
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+    .navbar a {
+        color: #000;
+    }
+
+    .navbar .bx-moon {
+        color: #000;
+    }
+}
